@@ -111,7 +111,7 @@ const NavBar = () => {
                             <DribbbleIcon />
                         </motion.a>
 
-                        <button onClick={() => setMode(mode === "light" ? "dark" : "light")} className={`ml-3 rounded-full p-1 sm:mx-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
+                        <button onClick={() => setMode(mode === "light" ? "dark" : "light")} className={`w-7 ml-3 rounded-full p-1 sm:mx-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
                             {
                                 mode === "dark" ? <SunIcon className= {"fill-dark"} /> : <MoonIcon className={"fill-dark"} />
                             }
