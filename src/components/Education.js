@@ -32,16 +32,16 @@ const Education = () => {
             <motion.div style={{scaleY: scrollYProgress}} ref={ref} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]'/>
             <ul className='w-full flex flex-col items-start justify-between ml-4'>
                 <Details 
-                type="Bachelor Of Science In Computer Science"
-                time="2016-2020" 
-                place="Massachusetts Institute Of Technology (MIT)"
-                info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."/>
+                type="Masters In Computer Science"
+                time="2018-2020" 
+                place="University of California, Davis (UCD)"
+                info="Relevant courses included Data Structures and Algorithms, Artificial Intelligence, Data Visualization."/>
 
                 <Details 
                 type="Bachelor Of Science In Computer Science"
-                time="2016-2020" 
-                place="Massachusetts Institute Of Technology (MIT)"
-                info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."/>
+                time="2014-2018" 
+                place="Vellore Institute of Technology (VIT), Vellore"
+                info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering."/>
             </ul>
         </div>
     </div>
