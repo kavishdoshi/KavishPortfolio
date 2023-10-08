@@ -62,6 +62,7 @@ const projects = () => {
         <Head>
             <title>Kavish | Projects</title>
             <meta name='description' content='Kavish Project'></meta>
+            <link rel="icon" href="../images/logos/logo-bggremoved.ico" />
         </Head>
         <TransitionEffect />
         <main className='w-full mb-16 flex flex-col items-center justify-center'>
