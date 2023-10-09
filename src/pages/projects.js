@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { GithubIcon } from '@/components/Icons'
 import project1Img from "../../public/images/projects/crypto-screener-cover-image.jpg"
+import project4Img from "../images/projects/project4.jpeg"
 import TransitionEffect from '@/components/TransitionEffect'
 
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
@@ -104,7 +105,7 @@ const projects = () => {
                         summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
                         link ="/"
                         type = "Featured Project"
-                        img={project1Img}
+                        img={project4Img}
                         github="/"
                         />
                     </div>
