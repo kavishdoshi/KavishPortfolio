@@ -15,7 +15,6 @@ export default function Home() {
       <Head>
         <title> Kavish | Home</title>
         <meta name="description" content='Home Page' />
-        <link rel="icon" href="../images/logos/logo-bggremoved.ico" />
       </Head>
       <TransitionEffect />
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>

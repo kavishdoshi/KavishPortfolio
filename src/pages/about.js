@@ -40,7 +40,6 @@ const about = () => {
         <Head>
             <title>Kavish | About Page</title>
             <meta name='description' content='About Kavish'></meta>
-            <link rel="icon" href="../images/logos/logo-bggremoved.ico" />
         </Head>
         <TransitionEffect />
         <main className='flex w-full flex-col items-center justify-center dark:text-light'>

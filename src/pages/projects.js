@@ -5,8 +5,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GithubIcon } from '@/components/Icons'
-import project1Img from "../../public/images/projects/crypto-screener-cover-image.jpg"
+import project1Img from "../images/projects/project1.png"
+import project2Img from "../images/projects/project2.png"
+import project3Img from "../images/projects/project3.png"
 import project4Img from "../images/projects/project4.jpeg"
+import project5Img from "../images/projects/project5.png"
+import project6Img from "../images/projects/project6.png"
 import TransitionEffect from '@/components/TransitionEffect'
 
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
@@ -63,7 +67,6 @@ const projects = () => {
         <Head>
             <title>Kavish | Projects</title>
             <meta name='description' content='Kavish Project'></meta>
-            <link rel="icon" href="../images/logos/logo-bggremoved.ico" />
         </Head>
         <TransitionEffect />
         <main className='w-full mb-16 flex flex-col items-center justify-center'>
@@ -72,61 +75,61 @@ const projects = () => {
                 <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
                     <div className='col-span-12'>
                         <FeaturedProject 
-                        title="Crypto Screener Application"
-                        summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                        link ="/"
+                        title="Movie Recommendation System "
+                        summary="A machine learning based movie recommendation system that recommends movies based on the user's previous ratings and the ratings of other users. It uses the concept of collaborative filtering to recommend movies."
+                        link ="https://github.com/Sherlockof96/Movie-Recommendation-System"
                         type = "Featured Project"
                         img={project1Img}
-                        github="/"
+                        github="https://github.com/Sherlockof96/Movie-Recommendation-System"
                         />
                     </div>
                     <div className='col-span-6 sm:col-span-12'>
                     <Project 
-                        title="Crypto Screener Application"
-                        link ="/"
+                        title="Collect Data For CCHD Screening Research"
+                        link ="https://www.cambridge.org/core/journals/journal-of-clinical-and-translational-science/article/novel-system-to-collect-dual-pulse-oximetry-data-for-critical-congenital-heart-disease-screening-research/6AAA3E41E270A41ED3417FBCB8123B41"
                         type = "Project"
-                        img={project1Img}
-                        github="/"
+                        img={project2Img}
+                        github="https://www.cambridge.org/core/journals/journal-of-clinical-and-translational-science/article/novel-system-to-collect-dual-pulse-oximetry-data-for-critical-congenital-heart-disease-screening-research/6AAA3E41E270A41ED3417FBCB8123B41"
                         />
                     </div>
                     <div className='col-span-6 sm:col-span-12'>
                     <Project 
-                        title="Crypto Screener Application"
-                        link ="/"
+                        title="An Efficient Approach To Civil Structures Health Monitoring Using Fog Computing"
+                        link ="http://ijassa.ipu.ru/index.php/ijassa/article/view/543/462"
                         type = "Project"
-                        img={project1Img}
-                        github="/"
+                        img={project3Img}
+                        github="http://ijassa.ipu.ru/index.php/ijassa/article/view/543/462"
                         />
                     </div>
 
                     <div className='col-span-12'>
                     <FeaturedProject 
-                        title="Crypto Screener Application"
-                        summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                        link ="/"
+                        title="Automatic Car Parking Allocation System"
+                        summary="Using computer vision and image processing, this project aims to automate the process of car parking allocation. It will help in reducing the time required to park a car and also reduce the human effort required."
+                        link ="https://github.com/Sherlockof96/ParkingSpot"
                         type = "Featured Project"
                         img={project4Img}
-                        github="/"
+                        github="https://github.com/Sherlockof96/ParkingSpot"
                         />
                     </div>
 
 
                     <div className='col-span-6 sm:col-span-12'>
                     <Project 
-                        title="Crypto Screener Application"
-                        link ="/"
+                        title="Raft Consensus Protocol"
+                        link ="https://github.com/Sherlockof96/ECS251-DevOS"
                         type = "Project"
-                        img={project1Img}
-                        github="/"
+                        img={project5Img}
+                        github="https://github.com/Sherlockof96/ECS251-DevOS"
                         />
                     </div>
                     <div className='col-span-6 sm:col-span-12'>
                     <Project 
-                        title="Crypto Screener Application"
-                        link ="/"
+                        title="Art Classification by Medium"
+                        link ="https://github.com/Sherlockof96/Art-Classification"
                         type = "Project"
-                        img={project1Img}
-                        github="/"
+                        img={project6Img}
+                        github="https://github.com/Sherlockof96/Art-Classification"
                         />
                     </div>
 
