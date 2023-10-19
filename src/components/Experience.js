@@ -8,7 +8,7 @@ const Details = ({position, company, companyLink, time, address, work, researchP
         <LiIcon reference = {ref}/>
         <motion.div initial={{y:50}} whileInView={{y:0}} transition={{duration:0.5, type: "spring"}}>
             <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg'>{position}&nbsp;<a href={companyLink} target="_blank" className='text-primary capitalize dark:text-primaryDark'>@{company}</a></h3>
-            <span className='capitalize font-medium text-dark/75 xs:text-sm'>
+            <span className='capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'>
                 {time} | {address}
             </span>
             <p className='font-medium w-full md:text-sm'>
