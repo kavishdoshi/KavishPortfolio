@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(req: NextRequest) {
-    console.log('middleware')
-    console.log(req.url)
 
     const response = NextResponse.next({ 
         request : { headers : req.headers, },
@@ -14,7 +12,7 @@ export function middleware(req: NextRequest) {
     }
 
     response.cookies.set("x-redirect-url", req.url); 
-    return NextResponse.redirect("http://login.kavishdoshi.com/signup");
+    return NextResponse.redirect("https://login.kavishdoshi.com/signup");
 }
 
 export const config = {
