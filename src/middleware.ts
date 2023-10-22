@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(req: NextRequest) {
     console.log('middleware')
     console.log(req.url)
-    
+
     const response = NextResponse.next({ 
         request : { headers : req.headers, },
     })
@@ -17,6 +17,6 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect("http://login.kavishdoshi.com/signup");
 }
 
-export const config = {
-    matcher: ['/', '/about', '/projects'],
-}
+// export const config = {
+//     matcher: ['/', '/about', '/projects'],
+// }
