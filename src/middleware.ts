@@ -17,6 +17,6 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect("http://login.kavishdoshi.com/signup");
 }
 
-// export const config = {
-//     matcher: ['/', '/about', '/projects'],
-// }
+export const config = {
+    matcher: ['/', '/about', '/projects'],
+}
