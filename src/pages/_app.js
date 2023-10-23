@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
     <>
-      <CheckLoggedIn route='http://kavishdoshi.com'/>
+      <CheckLoggedIn route={`https://kavishdoshi.com${router.asPath}`}/>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" type='image/x-icon' />
