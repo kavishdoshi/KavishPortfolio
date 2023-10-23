@@ -9,6 +9,9 @@ import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import TransitionEffect from '@/components/TransitionEffect'
+import checkLoggedIn from './api/checkLoggedIn';
+import Cookie from 'js-cookie'
+
 
 const AnimatedNumbers = ({value}) => {
 
@@ -34,7 +37,25 @@ const AnimatedNumbers = ({value}) => {
     return <span ref={ref}></span>
 }
 
-const about = () => {
+export async function getServerSideProps(context) {
+    const response = await fetch(checkLoggedIn, {
+      method : 'POST',
+    });
+    const loggedIn = await response.text();
+    return {
+      props: {loggedIn},
+    }
+  }
+
+const about = ({loggedIn}) => {
+    if (loggedIn == "false")
+    {
+        useEffect(() => {
+            Cookie.set('redirectURL', 'http://kavishdoshi.com/about', { expires: 1 , domain: '.kavishdoshi.com'})
+            window.location.href = "https://login.kavishdoshi.com/login"
+        }, [])
+
+    }
   return (
     <>
         <Head>

@@ -8,8 +8,30 @@ import { LinkArrow } from '@/components/Icons'
 import HireMe from '@/components/HireMe'
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg"
 import TransitionEffect from '@/components/TransitionEffect'
+import checkLoggedIn from './api/checkLoggedIn';
+import Cookie from 'js-cookie'
 
-export default function Home() {
+export async function getServerSideProps(context) {
+  const response = await fetch(checkLoggedIn, {
+    method : 'POST',
+  });
+  const loggedIn = await response.text();
+  return {
+    props: {loggedIn},
+  }
+}
+
+export default function Home({loggedIn}) {
+
+  if (loggedIn == "false")
+    {
+        useEffect(() => {
+            Cookie.set('redirectURL', 'http://kavishdoshi.com', { expires: 1 , domain: '.kavishdoshi.com'})
+            window.location.href = "https://login.kavishdoshi.com/login"
+        }, [])
+
+    }
+  
   return (
     <>
       <Head>
