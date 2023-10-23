@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie'
 import { useEffect } from 'react'
-import checkLoggedIn from './api/checkLoggedIn';
+import checkLoggedIn from '@/pages/api/checkLoggedIn';
 
 const CheckLoggedIn = ({route}) => {
     useEffect( async () => {
