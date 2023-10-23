@@ -12,8 +12,7 @@ import project4Img from "../images/projects/project4.jpeg"
 import project5Img from "../images/projects/project5.png"
 import project6Img from "../images/projects/project6.png"
 import TransitionEffect from '@/components/TransitionEffect'
-import checkLoggedIn from './api/checkLoggedIn';
-import Cookie from 'js-cookie'
+import CheckLoggedIn from '@/components/hooks/useCheckLoggedIn'
 
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
     return (
@@ -63,27 +62,10 @@ const Project = ({type, title, img, link, github}) => {
     )
 }
 
-export async function getServerSideProps(context) {
-    const response = await fetch(checkLoggedIn, {
-      method : 'POST',
-    });
-    const loggedIn = await response.text();
-    return {
-      props: {loggedIn},
-    }
-  }
-
-const projects = ({loggedIn}) => {
-    if (loggedIn == "false")
-    {
-        useEffect(() => {
-            Cookie.set('redirectURL', 'http://kavishdoshi.com/projects', { expires: 1 , domain: '.kavishdoshi.com'})
-            window.location.href = "https://login.kavishdoshi.com/login"
-        }, [])
-
-    }
+const projects = () => {
   return (
     <>
+        <CheckLoggedIn route='http://kavishdoshi.com/projects'/>
         <Head>
             <title>Kavish | Projects</title>
             <meta name='description' content='Kavish Project'></meta>
