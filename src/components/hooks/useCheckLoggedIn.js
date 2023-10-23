@@ -23,7 +23,6 @@ const CheckLoggedIn = ({route}) => {
             window.location.href = "https://login.kavishdoshi.com/login"
         }
     }, [])
-    return null
 }
 
 export default CheckLoggedIn
