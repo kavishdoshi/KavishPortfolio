@@ -1,7 +1,6 @@
 import Cookie from 'js-cookie'
 import { useEffect } from 'react'
 import checkLoggedIn from '@/pages/api/checkLoggedIn';
-import { getServerSession } from "next-auth/next";
 
 const CheckLoggedIn = ({route}) => {
     useEffect( async () => {
