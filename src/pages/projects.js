@@ -65,7 +65,6 @@ const Project = ({type, title, img, link, github}) => {
 const projects = () => {
   return (
     <>
-        <CheckLoggedIn route='http://kavishdoshi.com/projects'/>
         <Head>
             <title>Kavish | Projects</title>
             <meta name='description' content='Kavish Project'></meta>

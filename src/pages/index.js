@@ -15,7 +15,6 @@ export default function Home() {
   
   return (
     <>
-      <CheckLoggedIn route='https://kavishdoshi.com'/>
       <Head>
         <title> Kavish | Home</title>
         <meta name="description" content='Home Page' />

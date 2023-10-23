@@ -39,7 +39,6 @@ const about = () => {
     
   return (
     <>
-        <CheckLoggedIn route='http://kavishdoshi.com/about'/>
         <Head>
             <title>Kavish | About Page</title>
             <meta name='description' content='About Kavish'></meta>
