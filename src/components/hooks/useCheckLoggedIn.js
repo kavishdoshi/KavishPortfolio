@@ -10,7 +10,7 @@ const CheckLoggedIn = ({route}) => {
         //     method : 'POST',
 
         //   });
-        const loggedIn = false;
+        const loggedIn = "false";
         if (Cookie.get('Auth'))
         {
             if (Cookie.get('Auth') == 'Allowed')
