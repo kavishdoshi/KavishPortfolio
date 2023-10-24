@@ -40,7 +40,7 @@ const LogoutMobileLink = ({href, title, className="", toggle}) => {
     const handleClick = () => {
         toggle();
         //Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
-        console.log('inside')
+        console.log('inside mobile')
         router.push(href)
     }
 
@@ -95,7 +95,7 @@ const NavBar = () => {
                 <CustomLink href="/" title="Home" className='mr-4'/>
                 <CustomLink href="/about" title="About" className='mx-4'/>
                 <CustomLink href="/projects" title="Projects" className='mx-4'/>
-                <LogoutLink href="" title="Logout" className='mx-4'  />
+                <LogoutLink href="/" title="Logout" className='mx-4'  />
             </nav>
 
             <nav className='flex items-center justify-center flex-wrap'>
