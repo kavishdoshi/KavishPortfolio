@@ -10,12 +10,9 @@ const checkLogin = async ({route}) => {
     const data = await response.text();
     console.log(data);
     let loggedIn = "false";
-    if (Cookie.get('Auth'))
+    if (Cookie.get('Auth') == 'Allowed')
     {
-        if (Cookie.get('Auth') == 'Allowed')
-        {
-            loggedIn = "true"
-        }
+        loggedIn = "true"
     }
     if (loggedIn == "false")
     {
