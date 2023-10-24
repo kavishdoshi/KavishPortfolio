@@ -5,10 +5,14 @@ import { useRouter } from 'next/router'
 import { DribbbleIcon, GithubIcon, LinkedInIcon, MoonIcon, PinterestIcon, SunIcon, TwitterIcon } from './Icons'
 import { motion } from 'framer-motion'
 import useThemeSwitcher from './hooks/useThemeSwitcher'
+import Cookie from 'js-cookie'
 
 const CustomLink = ({href, title, className=""}) => {
     const router = useRouter()
-
+    if (title ==  "Logout")
+    {
+        Cookie.remove('Auth', { domain: 'kavishdoshi.com'})
+    }
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
@@ -21,6 +25,10 @@ const CustomLink = ({href, title, className=""}) => {
 
 const CustomMobileLink = ({href, title, className="", toggle}) => {
     const router = useRouter()
+    if (title ==  "Logout")
+    {
+        Cookie.remove('Auth', { domain: 'kavishdoshi.com'})
+    }
     const handleClick = () => {
         toggle();
         router.push(href)
@@ -58,6 +66,7 @@ const NavBar = () => {
                 <CustomLink href="/" title="Home" className='mr-4'/>
                 <CustomLink href="/about" title="About" className='mx-4'/>
                 <CustomLink href="/projects" title="Projects" className='mx-4'/>
+                <CustomLink href="https://login.kavishdoshi.com" title="Logout" className='mx-4' />
             </nav>
 
             <nav className='flex items-center justify-center flex-wrap'>
@@ -92,6 +101,7 @@ const NavBar = () => {
                         <CustomMobileLink href="/" title="Home" className='' toggle = {handleClick}/>
                         <CustomMobileLink href="/about" title="About" className=''toggle = {handleClick}/>
                         <CustomMobileLink href="/projects" title="Projects" className='' toggle = {handleClick}/>
+                        <CustomMobileLink href="https://login.kavishdoshi.com" title="Logout" className='' toggle = {handleClick}/>
                     </nav>
 
                     <nav className='flex items-center justify-center flex-wrap mt-2'>
