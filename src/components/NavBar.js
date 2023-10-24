@@ -23,7 +23,7 @@ const LogoutLink = ({href, title, className=""}) => {
     const router = useRouter()
     const handleLogout = () => {
         Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
-        console.log('inside')
+        router.push(href)
     }
     return (
         <button href={href} className={`${className} relative group`} onClick={handleLogout}>
@@ -40,7 +40,6 @@ const LogoutMobileLink = ({href, title, className="", toggle}) => {
     const handleClick = () => {
         toggle();
         Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
-        console.log('inside mobile')
         router.push(href)
     }
 
@@ -95,7 +94,7 @@ const NavBar = () => {
                 <CustomLink href="/" title="Home" className='mr-4'/>
                 <CustomLink href="/about" title="About" className='mx-4'/>
                 <CustomLink href="/projects" title="Projects" className='mx-4'/>
-                <LogoutLink href="/" title="Logout" className='mx-4'  />
+                <LogoutLink href="https://login.kavishdoshi.com" title="Logout" className='mx-4'  />
             </nav>
 
             <nav className='flex items-center justify-center flex-wrap'>
@@ -130,7 +129,7 @@ const NavBar = () => {
                         <CustomMobileLink href="/" title="Home" className='' toggle = {handleClick}/>
                         <CustomMobileLink href="/about" title="About" className=''toggle = {handleClick}/>
                         <CustomMobileLink href="/projects" title="Projects" className='' toggle = {handleClick}/>
-                        <LogoutMobileLink href="/" title="Logout" className='' toggle = {handleClick} />
+                        <LogoutMobileLink href="https://login.kavishdoshi.com" title="Logout" className='' toggle = {handleClick} />
                     </nav>
 
                     <nav className='flex items-center justify-center flex-wrap mt-2'>
