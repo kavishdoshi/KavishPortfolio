@@ -9,7 +9,7 @@ const checkLogin = async () => {
       });
     const data = await response.text();
     console.log(data);
-    let loggedIn = "true";
+    let loggedIn = "false";
     if (Cookie.get('Auth'))
     {
         if (Cookie.get('Auth') == 'Allowed')
