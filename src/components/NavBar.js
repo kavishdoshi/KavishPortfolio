@@ -22,7 +22,7 @@ const CustomLink = ({href, title, className=""}) => {
 const LogoutLink = ({href, title, className=""}) => {
     const router = useRouter()
     const handleLogout = () => {
-        //Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
         console.log('inside')
     }
     return (
@@ -39,7 +39,7 @@ const LogoutMobileLink = ({href, title, className="", toggle}) => {
     const router = useRouter()
     const handleClick = () => {
         toggle();
-        //Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
         console.log('inside mobile')
         router.push(href)
     }
