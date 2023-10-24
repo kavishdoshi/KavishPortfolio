@@ -9,10 +9,6 @@ import Cookie from 'js-cookie'
 
 const CustomLink = ({href, title, className=""}) => {
     const router = useRouter()
-    if (title ==  "Logout")
-    {
-        Cookie.remove('Auth', { domain: 'kavishdoshi.com'})
-    }
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
@@ -23,12 +19,43 @@ const CustomLink = ({href, title, className=""}) => {
     )
 }
 
+const LogoutLink = ({href, title, className=""}) => {
+    const router = useRouter()
+    const handleLogout = () => {
+        Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        console.log('inside')
+    }
+    return (
+        <button href={href} className={`${className} relative group`} onClick={handleLogout}>
+            {title}
+            <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'} dark:bg-light`}>
+                &nbsp;
+            </span>
+        </button>
+    )
+}
+
+const LogoutMobileLink = ({href, title, className="", toggle}) => {
+    const router = useRouter()
+    const handleClick = () => {
+        toggle();
+        Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        console.log('inside')
+        router.push(href)
+    }
+
+    return (
+        <button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
+            {title}
+            <span className={`h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'}`}>
+                &nbsp;
+            </span>
+        </button>
+    )
+}
+
 const CustomMobileLink = ({href, title, className="", toggle}) => {
     const router = useRouter()
-    if (title ==  "Logout")
-    {
-        Cookie.remove('Auth', { domain: 'kavishdoshi.com'})
-    }
     const handleClick = () => {
         toggle();
         router.push(href)
@@ -52,12 +79,14 @@ const NavBar = () => {
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
+    Cookie.set('Auth', 'temp')
   return (
     <header className='relative w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light z-10 lg:px-16 md:px-12 sm:p-8'>
         
         <button className='flex-col justtify-center items-center hidden lg:flex' onClick={handleClick}>
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? 'rotate-45 translate-y-1': '-translate-y-0.5'}`}></span>
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0': 'opacity-1'}`}></span>
+            <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? '-rotate-45 -translate-y-1': 'translate-y-0.5'}`}></span>
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? '-rotate-45 -translate-y-1': 'translate-y-0.5'}`}></span>
         </button>
 
@@ -66,7 +95,7 @@ const NavBar = () => {
                 <CustomLink href="/" title="Home" className='mr-4'/>
                 <CustomLink href="/about" title="About" className='mx-4'/>
                 <CustomLink href="/projects" title="Projects" className='mx-4'/>
-                <CustomLink href="https://login.kavishdoshi.com" title="Logout" className='mx-4' />
+                <LogoutLink href="" title="Logout" className='mx-4'  />
             </nav>
 
             <nav className='flex items-center justify-center flex-wrap'>
@@ -101,7 +130,7 @@ const NavBar = () => {
                         <CustomMobileLink href="/" title="Home" className='' toggle = {handleClick}/>
                         <CustomMobileLink href="/about" title="About" className=''toggle = {handleClick}/>
                         <CustomMobileLink href="/projects" title="Projects" className='' toggle = {handleClick}/>
-                        <CustomMobileLink href="https://login.kavishdoshi.com" title="Logout" className='' toggle = {handleClick}/>
+                        <LogoutMobileLink href="/" title="Logout" className='' toggle = {handleClick} />
                     </nav>
 
                     <nav className='flex items-center justify-center flex-wrap mt-2'>
