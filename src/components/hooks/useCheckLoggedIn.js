@@ -4,11 +4,12 @@ import checkLoggedIn from '@/pages/api/checkLoggedIn';
 
 const CheckLoggedIn = ({route}) => {
     useEffect( async () => {
-        // const session = await getServerSession();
-        // const response = await fetch(checkLoggedIn, {
-        //     method : 'POST',
+        
+        const response = await fetch(checkLoggedIn, {
+            method : 'POST',
 
-        //   });
+          });
+        console.log(response.text())
         let loggedIn = "false";
         if (Cookie.get('Auth'))
         {
