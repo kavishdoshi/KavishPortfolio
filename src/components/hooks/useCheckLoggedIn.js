@@ -2,7 +2,7 @@ import Cookie from 'js-cookie'
 import { useEffect } from 'react'
 import checkLoggedIn from '@/pages/api/checkLoggedIn';
 
-const checkLogin = async ({route}) => {
+const checkLogin = async () => {
     const response = await fetch(checkLoggedIn, {
         method : 'POST',
 
@@ -22,13 +22,12 @@ const checkLogin = async ({route}) => {
         Cookie.set('redirectURL', route, { expires: 1 , domain: '.kavishdoshi.com'})
         window.location.href = "https://login.kavishdoshi.com/login"
     }
-    return data;
 }
 
 
 const CheckLoggedIn = ({route}) => {
-    useEffect(async () => {
-    checkLogin(route);
+    useEffect(() => {
+       checkLogin();
     }, [])
 }
 
