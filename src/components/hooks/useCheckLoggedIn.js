@@ -2,7 +2,7 @@ import Cookie from 'js-cookie'
 import { useEffect } from 'react'
 import checkLoggedIn from '@/pages/api/checkLoggedIn';
 
-const checkLogin = async () => {
+const checkLogin = async ({route}) => {
     const response = await fetch(checkLoggedIn, {
         method : 'POST',
 
@@ -26,8 +26,8 @@ const checkLogin = async () => {
 
 
 const CheckLoggedIn = ({route}) => {
-    useEffect(() => {
-       checkLogin();
+    useEffect(async () => {
+       await checkLogin(route=route);
     }, [])
 }
 
