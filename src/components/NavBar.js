@@ -6,6 +6,7 @@ import { DribbbleIcon, GithubIcon, LinkedInIcon, MoonIcon, PinterestIcon, SunIco
 import { motion } from 'framer-motion'
 import useThemeSwitcher from './hooks/useThemeSwitcher'
 import Cookie from 'js-cookie'
+import Logout from '@/pages/api//logout'
 
 const CustomLink = ({href, title, className=""}) => {
     const router = useRouter()
@@ -23,6 +24,7 @@ const LogoutLink = ({href, title, className=""}) => {
     const router = useRouter()
     const handleLogout = () => {
         Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        fetch(Logout, {method : 'POST'});
         router.push(href)
     }
     return (
@@ -40,6 +42,7 @@ const LogoutMobileLink = ({href, title, className="", toggle}) => {
     const handleClick = () => {
         toggle();
         Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        fetch(Logout, {method : 'POST'});
         router.push(href)
     }
 
