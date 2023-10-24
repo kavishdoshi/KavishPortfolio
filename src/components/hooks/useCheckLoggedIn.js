@@ -18,6 +18,10 @@ const CheckLoggedIn = ({route}) => {
         }
         if (loggedIn == "false")
         {
+            if (route == undefined)
+            {
+                route = "https://kavishdoshi.com"
+            }
             Cookie.set('redirectURL', route, { expires: 1 , domain: '.kavishdoshi.com'})
             window.location.href = "https://login.kavishdoshi.com/login"
         }
