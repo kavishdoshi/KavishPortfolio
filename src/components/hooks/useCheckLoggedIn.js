@@ -26,8 +26,8 @@ const checkLogin = async ({route}) => {
 
 
 const CheckLoggedIn = ({route}) => {
-    useEffect(async () => {
-       await checkLogin(route=route);
+    useEffect(() => {
+        checkLogin(route=route);
     }, [])
 }
 
