@@ -22,7 +22,7 @@ const CustomLink = ({href, title, className=""}) => {
 const LogoutLink = ({href, title, className=""}) => {
     const router = useRouter()
     const handleLogout = () => {
-        Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        //Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
         console.log('inside')
     }
     return (
@@ -39,7 +39,7 @@ const LogoutMobileLink = ({href, title, className="", toggle}) => {
     const router = useRouter()
     const handleClick = () => {
         toggle();
-        Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        //Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
         console.log('inside')
         router.push(href)
     }
@@ -79,7 +79,7 @@ const NavBar = () => {
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
-    
+
   return (
     <header className='relative w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light z-10 lg:px-16 md:px-12 sm:p-8'>
         
