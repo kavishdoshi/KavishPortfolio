@@ -24,6 +24,7 @@ const LogoutLink = ({href, title, className=""}) => {
     const router = useRouter()
     const handleLogout = () => {
         Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        Cookie.remove('UserId', {domain: '.kavishdoshi.com'})
         fetch(Logout, {method : 'POST'});
         router.push(href)
     }
@@ -42,6 +43,7 @@ const LogoutMobileLink = ({href, title, className="", toggle}) => {
     const handleClick = () => {
         toggle();
         Cookie.remove('Auth', {domain: '.kavishdoshi.com'})
+        Cookie.remove('UserId', {domain: '.kavishdoshi.com'})
         fetch(Logout, {method : 'POST'});
         router.push(href)
     }

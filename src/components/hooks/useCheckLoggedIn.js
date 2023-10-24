@@ -5,9 +5,11 @@ import checkLoggedIn from '@/pages/api/checkLoggedIn';
 
 const CheckLoggedIn = ({route}) => {
     useEffect(async () => {
+        
+        const userId = Cookie.get('UserId') ? Cookie.get('UserId') : "-1";
         const response = await fetch(checkLoggedIn, {
             method : 'POST',
-    
+            body : userId
           });
         const data = await response.text();
         console.log(data);
