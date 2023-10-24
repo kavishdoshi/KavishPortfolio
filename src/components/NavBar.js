@@ -79,7 +79,7 @@ const NavBar = () => {
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
-    Cookie.set('Auth', 'temp')
+    
   return (
     <header className='relative w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light z-10 lg:px-16 md:px-12 sm:p-8'>
         
