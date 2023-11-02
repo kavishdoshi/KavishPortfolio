@@ -78,10 +78,10 @@ const projects = () => {
                         <FeaturedProject 
                         title="Movie Recommendation System "
                         summary="A machine learning based movie recommendation system that recommends movies based on the user's previous ratings and the ratings of other users. It uses the concept of collaborative filtering to recommend movies."
-                        link ="https://github.com/Sherlockof96/Movie-Recommendation-System"
+                        link ="https://github.com/kavishdoshi/Movie-Recommendation-System"
                         type = "Featured Project"
                         img={project1Img}
-                        github="https://github.com/Sherlockof96/Movie-Recommendation-System"
+                        github="https://github.com/kavishdoshi/Movie-Recommendation-System"
                         />
                     </div>
                     <div className='col-span-6 sm:col-span-12'>
@@ -107,10 +107,10 @@ const projects = () => {
                     <FeaturedProject 
                         title="Automatic Car Parking Allocation System"
                         summary="Using computer vision and image processing, this project aims to automate the process of car parking allocation. It will help in reducing the time required to park a car and also reduce the human effort required."
-                        link ="https://github.com/Sherlockof96/ParkingSpot"
+                        link ="https://github.com/kavishdoshi/ParkingSpot"
                         type = "Featured Project"
                         img={project4Img}
-                        github="https://github.com/Sherlockof96/ParkingSpot"
+                        github="https://github.com/kavishdoshi/ParkingSpot"
                         />
                     </div>
 
@@ -118,19 +118,19 @@ const projects = () => {
                     <div className='col-span-6 sm:col-span-12'>
                     <Project 
                         title="Raft Consensus Protocol"
-                        link ="https://github.com/Sherlockof96/ECS251-DevOS"
+                        link ="https://github.com/kavishdoshi/ECS251-DevOS"
                         type = "Project"
                         img={project5Img}
-                        github="https://github.com/Sherlockof96/ECS251-DevOS"
+                        github="https://github.com/kavishdoshi/ECS251-DevOS"
                         />
                     </div>
                     <div className='col-span-6 sm:col-span-12'>
                     <Project 
                         title="Art Classification by Medium"
-                        link ="https://github.com/Sherlockof96/Art-Classification"
+                        link ="https://github.com/kavishdoshi/Art-Classification"
                         type = "Project"
                         img={project6Img}
-                        github="https://github.com/Sherlockof96/Art-Classification"
+                        github="https://github.com/kavishdoshi/Art-Classification"
                         />
                     </div>
 
