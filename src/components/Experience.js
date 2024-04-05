@@ -38,7 +38,15 @@ const Experience = () => {
                 <Details 
                 position= "Software Engineer 2"
                 company="Microsoft"
-                time="August 2023-Present"
+                time="October 2024-Present"
+                address="Redmond, WA"
+                work = "Working on a team responsible for developing ingestion of Azure's telemetry (logs and metrics)"
+                companyLink="https://www.microsoft.com"/>
+
+                <Details 
+                position= "Software Engineer 2"
+                company="Microsoft"
+                time="August 2023-October 2024"
                 address="Vancouver, BC"
                 work = "Working on a team responsible for developing ingestion of Azure's telemetry (logs and metrics)"
                 companyLink="https://www.microsoft.com"/>
