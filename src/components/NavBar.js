@@ -99,6 +99,7 @@ const NavBar = () => {
                 <CustomLink href="/" title="Home" className='mr-4'/>
                 <CustomLink href="/about" title="About" className='mx-4'/>
                 <CustomLink href="/projects" title="Projects" className='mx-4'/>
+                <CustomLink href="/chatWithAI" title="Chat about me" className='mx-4'/>
                 <LogoutLink href="https://login.kavishdoshi.com" title="Logout" className='mx-4'  />
             </nav>
 
@@ -134,6 +135,7 @@ const NavBar = () => {
                         <CustomMobileLink href="/" title="Home" className='' toggle = {handleClick}/>
                         <CustomMobileLink href="/about" title="About" className=''toggle = {handleClick}/>
                         <CustomMobileLink href="/projects" title="Projects" className='' toggle = {handleClick}/>
+                        <CustomMobileLink href="/chatWithAI" title="Chat about me" className='' toggle = {handleClick}/>
                         <LogoutMobileLink href="https://login.kavishdoshi.com" title="Logout" className='' toggle = {handleClick} />
                     </nav>
 
