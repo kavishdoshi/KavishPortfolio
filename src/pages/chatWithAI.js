@@ -17,8 +17,8 @@ const chatWithAI = () => {
         <main className='flex w-full flex-col items-center justify-center dark:text-light'>
             <Layout classname='pt-16'>
                 <AnimatedText text="Chat About Kavish!" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8'/>
-                <div className='grid w-full grid-cols-8 gap-16 sm:gap-8 '>
-                    <EmbedWebsite url = { "https://chatkavishdetails.azurewebsites.net/" } />
+                <div className='flex items-center w-full lg:flex-col'>
+                    <EmbedWebsite url= { "https://chatkavishdetails.azurewebsites.net/" } />
                 </div>
             </Layout>
         </main>
